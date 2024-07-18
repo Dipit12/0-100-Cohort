@@ -5,8 +5,8 @@ function findSum(a,b){
 }
 
 console.log(findSum(3,2));
-// callbacks
 
+// callbacks
 function findSquare(a,fnToCall){
     let result  = a**2;
     fnToCall(result);
