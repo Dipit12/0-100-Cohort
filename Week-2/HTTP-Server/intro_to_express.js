@@ -13,10 +13,11 @@ app.get('/',function (req,res) {
     res.send("Hello world")
 })
 
+app.get("/home", function (req,res){
+    res.send("This is the home page")
+})
 app.post('/backend-api', function(req,res){
     res.send("Hello Backend API")
 })
 
-app.listen(port,()=> {
-    console.log("Listening on port 3000")
-})
+app.listen(port)
