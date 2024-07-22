@@ -1,0 +1,31 @@
+** Going to the doctor
+    -> Doctors have a skill
+    -> They have acquired that skill over years
+    -> They provide service to other  people who want to use their skill\
+
+    -> To expose this life skill, they open a clinic
+    -> People who want to use their skill line up in a waiting room
+    -> One by one, the doctor meets them
+    -> The doctor is single threaded
+
+Your logic is like a doctor
+But what if you want to expose this logic to the world?
+This is where HTTP comes into the picture
+It lets you create a hospital where people can come and find you
+
+How do i expose my doctor functionality to other ppl??
+How can they find me? -> By creating an HTTP server
+How do i create an HTTP server -> Express 
+
+Request Methods:
+    -> GET: going for a consultation to get a check up
+    -> POST: Going to get a new kidney inserted
+    -> PUT: Going to get a kidney replaced
+    -> DELETE: Going to get a kidney removed
+
+Status Codes:
+    -> 200: everything went fine
+    -> 404:Doctor is not in the hospital
+    -> 500: Mid surgery light went away
+    -> 411: Inputs were incorrect, wrong person came to surgery
+    
