@@ -1,0 +1,27 @@
+** Bash and Terminal **
+1. pwd
+    -> to get the current directory(print working directory)
+2. cd
+    -> change directory
+3. ls
+    -> list: returns the files in a particular directory
+4. mkdir
+    -> make directory: used to create directory
+5. touch 
+    -> used to create empty files
+6. cat
+    -> to view content of a file
+7. vi
+    -> vim command
+8. mv
+    -> move files
+    -> eg: mv file.ext folder_loc
+9. cp
+10. nvm(node version manager)
+11. npm
+12. node(creates a JS shell, just like we activate a shell after writing python)
+
+
+-> Terminal is nothing but another interface to do things on your machine
+    replacement of GUI -> though not a complete replacement
+
