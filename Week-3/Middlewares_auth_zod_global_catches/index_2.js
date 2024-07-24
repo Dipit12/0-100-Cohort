@@ -1,5 +1,6 @@
 const express = require("express")
 const app = express();
+app.use(express.json());
 
 function user_pass_middleware(req,res,next){
     const username = req.headers.username;
@@ -26,9 +27,12 @@ function KidneyIDMiddleware(req,res,next){
         next();
     }
 }
-
-app.get("/health-checkup", user_pass_middleware, KidneyIDMiddleware, function(req,res){
+app.use(user_pass_middleware, KidneyIDMiddleware)
+app.get("/health-checkup", function(req,res){
     res.send("Your kidney is healthy");
 })
 
-app.listen(3001);
+app.post("/kidney-checkup", function(req,res){
+    res.send("Your body is healthy");
+})
+app.listen(3002);

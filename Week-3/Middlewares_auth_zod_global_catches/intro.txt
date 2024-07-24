@@ -1,0 +1,92 @@
+// Topics to cover in this video
+    -> Middlewares & Global catches
+    -> Zod
+    -> Authentication
+
+Before you reach the doctor:
+    -> Your adhaar/insurance info is taken. Only if you have insurance you proceed
+    -> Blood test is done, only if no STD does use proceed
+    -> BP is checked, only if reasonable user proceeds
+    Basically there are a few pre-checks before meeting the doctor;
+    
+How do you do:
+    -> Auth checks?(Does this user have funds to visit the doctor)
+    -> Ensure input by the user is valid(BP/Blood test)
+
+    Answer: Middlewares
+
+// code without constraints
+const express = require("express")
+const app = express();
+
+app.get("/health-checkup", function(req,res){
+    res.send("You are healthy")
+})
+app.listen(3000) // port number
+
+// Before we proceed, lets add constraints to our route
+-> User need to send a kidneyID as a query param which should be a number from 1-2
+-> User should send a username and password in headers
+
+// code with constraints
+const express = require("express")
+const app = express()
+
+app.get("/health-checkup", (req,res)=>{
+    const kidneyID = req.query.kidneyID;
+    const username = req.headers.username;
+    const password = req.headers.password;
+
+    if(username != "harkirat" && password != "pass"){
+        res.status(403).json({
+            msg:"User doesn't exist",
+        });
+        return;
+    }
+    if(kidneyID != 1 || kidneyID != 2){
+        res.status(411).json({
+            msg:"wrong input",
+        });
+        return;
+    }
+
+    res.send("Your heart is healthy")
+})
+
+// What if i tell you to introduce another route that does kidney replacement, inputs need to be same
+    if this is the case, there would be repetition of code, thus we can create a wrapper func in which validation code is present and can put that code in one place, that place is called Middlewares
+    refer to index_1.js
+
+// Last thing in Middlewares -> app.use()
+    -> to use a middleware at multiple places, we use this
+    -> refer to index_2.js
+
+So basically middlewares are used to do a pre-check
+This precheck is usually:
+    -> Authentication(correct username and pass)
+    -> Correct inputs given
+
+// Global catches 
+    -> used so that ur backend error should not be visible to frontend
+    -> its also a middleware
+    -> at the frontend, there should be a msg like something is wrong with our server
+    -> error handling middleware
+    -> gives better error to user
+
+// Introduction to Zod
+    -> It helps in input validation
+    eg:
+    if(kidneyID != 1 || kidneyID != 2){
+        return false;
+    }
+    This is very hard to scale, what if you expect a complicated input
+
+// Introduction to Authentication
+As you can tell by now, anyone can send requests to your backend. They can just go to postman and send a request
+How do you ensure that this user has access to a certain resource??
+
+Slightly better way:
+    -> Give the user back a token on signup/signin page
+    -> Ask the user to send back the token in all future requests
+    -> When the user logs out, ask the user to forget the tocken(or revoke it from the backend)
+    
