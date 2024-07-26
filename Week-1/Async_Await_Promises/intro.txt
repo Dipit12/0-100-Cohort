@@ -1,0 +1,29 @@
+Topics to cover in this class
+-> Async Vs Sync Functions
+-> Real use of callbacks
+-> JS Browser Architecture
+-> Promises
+-> Async await
+
+// What does Synchronous mean??
+    -> Together, one after the other, sequential, only one thing is happening at a time
+
+// What does asynchronous mean??
+    -> Opposite of Synchronous
+    -> Happens in parts 
+    -> Multiple things are context switching with each other
+
+Human brain and body is single threaded
+    -> we can only do one thing at a time
+    -> But we can context switch b/w tasks, or we can delegate tasks to other people
+
+How does JS do the same? Can JS delegate?? Can JS context switch??
+    -> Yess!!, Using asynchronous Functions
+
+Until now we've only seen Synchronous Functions
+
+Some common async Functions
+    -> setTimeout
+    -> fs.readfile - to read a file from your filesystem
+    -> Fetch - to fetch some data from an API endpoint
+    

@@ -1,0 +1,6 @@
+To unstage a file without commiting
+    -> git restore --staged file_name
+
+To delete a file:
+    -> rm -rf names.txt
+    

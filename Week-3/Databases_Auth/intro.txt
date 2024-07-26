@@ -1,0 +1,83 @@
+// Topics to cover in this class
+    -> Fetch 
+    -> Authentication
+    -> Databases
+
+// Fetch API
+    -> Until now, we've seen sending request in 2 ways
+        -> In the URL section
+        -> Through postman
+
+-> There's a third way
+Lets say i ask you to create an HTML page where you can see the names of 10 ppl
+You need to make sure you get this data from an API call
+basically fetch is like request module in python
+
+// Intro to Authentication
+    -> Let people sign up to your website
+    -> Only allowed signed in users to see people(create a dummy people list)
+
+-> Almost all websites have Auth
+-> There are complicated ways to do auth(Login with google/github/apple)
+-> Easiest is username and password
+
+Before we get into authentication, lets understand some cryptography jargon
+    -> Hashing
+        -> When we make an account on some website your password is simply not stored in the Database
+        -> It is converted into some jargonish string and then stored into a Database
+        -> This is called hashing, thus before storing any pass into a database, we must hash it
+        -> It is one way, given the output no one can find out the input
+        -> Changing the input changes, the output too much
+    -> Encryption
+        -> Using hashing, we can't convert back the hashed string into the original password back
+        -> In Encryption, we can decrpyt the string back using a security key
+    -> Json web tokens(JWT)
+        -> Auth for json input only
+        -> Generates a token at the end(basically a token)
+        -> Different from hasing and Encryption
+        -> It's like a digital signal
+        -> Signature can be verified only using the password
+        -> Anyone can see the original output using the password
+    -> Local storage
+        -> A place in your browser where you can store some data, usually things that are stored include:
+            -> Authentication tokens
+            -> User language preference
+            -> User theme preference
+
+// Assignment for today - A website which has 2 endpoints
+POST/signin
+    Body{
+        username:string,
+        password: string
+    }
+Returns a json web token with username encrypted
+
+GET/users
+Headers - Authorization header
+Returns an array of all the users if user is signed in(token is correct)
+Returns 403 status code if not
+
+// Intro to Databases
+Until now, we've been storing data in memory
+This is bad for a few reasons:  
+    -> Data can't be dynamic, if you update in memory objects, the updates are lost if the process restarts
+    -> There are multiple servers in the real world
+    In the real world, a basic architecture looks like this
+        -> User hits the backend
+        -> Backend hits the database
+        -> User doesnt have access to the database/ can't talk to the database
+
+There are various types of Databases:
+    -> Graph DB's
+    -> Vector DB's 
+    -> SQL DB's 
+    -> NoSQL DB's 
+
+    For todays class, we'll look at a famous noSQL database -> MongoDB
+// MongoDB
+    -> It lets you create Databases
+    -> In each DB, it lets you create tables(collections)
+    -> IN each table, it lets you dumb json data
+    -> It is schemaless
+    -> It scales well and is a decent choice for most use cases
+    // Mongoose(is a library that) lets you connect to your database

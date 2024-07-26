@@ -1,0 +1,15 @@
+// Understanding Middlewares through examples
+// Let's say you go to a amusement park and u are standing in a queue for a ride 
+// When your chance comes and you dont have the ticket, the incharge there would kick you from there
+// Middleware is this kind of a precheck.
+
+Express is a routing and middleware web framework that has minimal functionality of it's own.
+An Express application is essentially a series of middleware function calls
+
+Middleware functions do the following things:
+    -> Execute any code
+    -> Make changes to the request and the responsive objects
+    -> End the request-response cycle
+    -> Call the next middleware function in the stack;
+
+-> Codifying this example - refer to index.js
