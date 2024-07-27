@@ -1,0 +1,29 @@
+<html>
+    <script>
+        function populateDiv(){
+            const a = document.getElementById("num1").value;
+            const b = document.getElementById("num2").value;
+            const element = document.getElementById("finalSum");
+            //element.innerHTML = parseInt(a) + pareseInt(b);
+            const res = fetch("https://localhost:3000?a=" + a + "&b=" + b).then(function(response){
+                console.log(response)
+            })
+            response.text().then(function(ans){
+                document.getElementById("finalSum").innerHTML = ans
+            })
+        }
+
+    </script>
+    <head>
+        <title> Simple Calculator</title>
+    </head>
+    <body>
+        <input type = "text" placeholder="First number" id = "num1"> </input> <br>
+        <input type = "text" placeholder = "Second Number" id = "num2"> </input>  <br>
+        <button onclick="populateDiv()">Calculate Sum</button> <br>
+    </body>
+
+    <div id = "finalSum">
+
+    </div>
+</html>

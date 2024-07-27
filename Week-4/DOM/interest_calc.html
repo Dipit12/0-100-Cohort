@@ -1,0 +1,39 @@
+<html>
+    <script>
+
+        function debouncePopulateDiv(){
+            // delay the call to populateDiv until ive not been called for 100ms
+          const timeout =   setTimeout(function(){
+                populateDiv()
+            },100);
+            clearTimeout(timeout);
+
+        }
+        function populateDiv(){
+            const principal = document.getElementById("principal").value;
+            const rate = document.getElementById("rate").value;
+            const time = document.getElementById("time").value;
+            const element = document.getElementById("finalSum");
+            //element.innerHTML = parseInt(a) + pareseInt(b);
+            const res = fetch("https://localhost:3000?principal=" + principal + "&rate=" + rate + "&time=" + time).then(function(response){
+                console.log(response)
+            })
+            response.text().then(function(ans){
+                document.getElementById("finalSum").innerHTML = ans
+            })
+        }
+
+    </script>
+    <head>
+        <title> Simple Interest Calculator</title>
+    </head>
+    <body>
+        <input type = "text" placeholder="Principal" id = "principal"> </input> <br>
+        <input type = "text" placeholder = "Rate" id = "rate"> </input>  <br>
+        <input type = "text" placeholder="Time" id = "time"> </input> <br>
+    </body>
+
+    <div id = "finalSum">
+
+    </div>
+</html>
