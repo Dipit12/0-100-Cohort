@@ -1,0 +1,10 @@
+div{
+    height:100px;
+    width:100px;
+    background-color: dodgerblue;
+    color:white;
+    border: 1px solid black;
+    margin: 5px;
+    text-align:center;
+
+}
