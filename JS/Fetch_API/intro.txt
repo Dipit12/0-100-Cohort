@@ -1,0 +1,6 @@
+// fetch API
+The fetch API provides an interface for fetching (sending/receiving) resources
+It used Request and Response object
+The fetch() method is used to fetch a rsource (data)
+
+let promise = fetch(url, options [])

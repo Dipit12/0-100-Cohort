@@ -1,0 +1,35 @@
+// Topics to cover: Callbacks, Promises & Async Await
+Sync in JS
+
+Synchronous:
+    -> Synchronous means the code runs in a particular sequence of instructions given in the program.
+    -> Each instruction waits for the previous instruction to complete its execution
+Asynchronous:   
+    -> Due to Synchronous programming, sometimes imp instructions get blocked due to some previous instructions, which causes a delay in the UI.
+    -> Asynchronous code execution allows to exeute next instructions immediately and doesnt block the flow
+Callbacks:
+    -> A callback is a function passed as an argument to another function
+
+Callback hell:
+    -> Nested callbacks stacked below one another forming a pyramid structure(pyramid of doom)
+    -> This style of programming becomes difficult to understand & manage
+    -> To avoid this problem we use a concept called Promises
+Promise:
+    -> Promise if for "eventual" completion of task.It is an object in JS
+    -> Its a solution to callback hell
+
+    let promise = new Promise((resolve,reject)=>{ // resolve and reject are provided by JS 
+        // some code
+    })
+
+A javascript Promise object can be: 
+    -> Pending: the result is undefined
+    -> Resolved: the result is a value(fulfilled)
+    -> Rejected: the result is an error object
+Async-Await:
+    -> async functions always return a Promise
+    async function myFunc(){
+
+    }
+    await pauses the execution of its surrounding async function until the promise is fulfilled
+    

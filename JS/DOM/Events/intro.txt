@@ -13,3 +13,9 @@ btn1.onclick = (e) => {
     console.log(e) // returns event object
     console.log("button was clicked")
 }
+
+// Event Listeners
+node.addEventListener(event,callback)
+node.removeEventListener(event,callback)
+
+// Practise ques - Create a toggle button that changes the screen to dark-mode when clicked & light-mode when clicked again

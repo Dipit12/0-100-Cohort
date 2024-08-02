@@ -23,4 +23,26 @@ Properties:
     -> innerText: returns the text content of the element and all its children
     -> innerHTML: returns the plain text or HTML content in the element
     -> textContent: returns textual content even for hidden elements 
-    
+
+// Question
+-> Create a H2 heading element with text = "Hello Javascript". Append "from Apna college students" to this text using JavaScript
+-> Create 3 divs with common class name "box". Access them and add some unique text to each of them
+
+Attributes:
+    -> getAttribute(attr) // to get the attribute value
+    -> setAttribute(attr,value) // to set the attribute val 
+
+// Creating a new element, inserting elements and deleting them
+let el = document.createElement("div")
+
+node.append(el) // adds at the end of the node
+node.prepend(el) // adds at the start of the node
+node.before(el) // adds before the node(outside)
+node.after(el) // adds after the node(outside)
+node.remove() // removes the node
+
+// Practise Questions
+1. Create a new button element.Give it a text "click-me", background color of red and text color of white
+    inside the button as the first element inside the body tag
+2. Create a <p> tag in html, give it a class and some styling
+    Now create a new class in CSS and try to append this class to the <p> element

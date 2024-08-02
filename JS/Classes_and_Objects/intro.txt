@@ -1,0 +1,38 @@
+// Prototypes in JS
+    -> A JS object is an entity having state and behaviour(properties and methods)
+    -> JS objects have a special property called Prototypes
+    -> We can set prototype using __proto__
+    ->  If object & prototype have same method, object’s method will be used.
+    -> Prototype is an object created by default whenever an object is created, it an object inside of an object, which gives the created object different properties like toString() etc etc.
+// Classes in JS
+    -> Class is a program-code template for creating objects
+    -> Those objects will have some state(variables) & some behaviour(functions) inside it
+    // basic Sytax:
+
+    class MyClass{
+        constructor(){
+
+        }
+        myMethod(){
+
+        }
+    }
+    let myObj = new MyClass;
+// Constructor -> an method in a class which is called whenever an object is called
+
+// Inheritance
+    -> inheritance is passing down properties and methods from parent class to child class
+
+    class parent{
+
+    }
+    class Child extends parent{
+
+    } 
+    -> If child and parent have same method, childs method will be used -> Method Overriding
+
+// super keyword
+    -> THe super keyword is used to call the constructor of it's parent class to access the parents properties and methods
+    super(args) // calls Parent's constructor
+    super.parentMethod(args)
+    

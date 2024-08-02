@@ -1,0 +1,72 @@
+// Variables and Datatypes
+Variables - containers to store data;
+Data stored in the vatiable can be changed after declaring and initializing it 
+
+JS is a dynamic langauge, which means we dont need to initialize the datatype, it is possible that in a variable we store data of different Datatypes
+
+Variable Rules
+    -> variables are case sensitive
+    -> only letters,digits,underscore(_) and  $ is allowed(not even space)
+    -> Only a letter, underscore ot $ should be the 1st char
+    -> Reserved keywords cannot be variable names
+
+let/const/var
+
+var: Variables can be re-declared and updated. A global scope variable -> not used these days
+let: Variables cannot be re-declared but can be updated. A block scope variable
+const: Variables cannot be re-declared or updated. A block scope variable
+
+Primitive DataTypes in JS:
+    ->Number
+    ->String 
+    ->Boolean 
+    ->Undefined
+    ->Null
+    ->BigInt
+    ->Symbol
+By default value and typeof declared variables in JS is Undefined
+
+Non-Primitive DataTypes in JS:
+    -> Objects
+    -> Arrays
+Operators in JS(used to perform some operation on data)
+
+** Arithematic Operators **
+    -> +,-,*,/
+    -> Modulus: returns the remainder = %
+    -> Exponentiation: 2 ** 3 => equivalent to 2 raise to the power 3
+    -> Increment: ++i / i++ => Pre/post Increment
+    -> Decrement: --i/ i=-- => Pre/post Decrement
+** Assignment Operators **
+    -> =
+    -> +=
+    -> -=
+    -> *=
+    -> %=
+    -> **=
+
+** Comparison Operators **
+    -> equal to -> ==
+    -> Equal to and type -> ===
+    -> Not equal to -> !=
+    > Not equal to and type -> !==
+
+** Logical Operators **
+    -> Logical AND - &&
+    -> Logical OR - ||
+    -> Logical NOT -> !
+
+# Conditional Statements
+if(condition){
+    // lines of code -> would be executed if the condition is true
+}
+else{
+    // lines of code -> would be executed if the condition mentioned in if statement is false
+}
+
+// Ternary Operators
+
+Syntax: condtion?true output: false output
+// Loops and Strings
+
+Loops are used to execute a piece of code again & again
