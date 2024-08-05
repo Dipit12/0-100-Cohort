@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Button</title>
+</head>
+<script>
+    function counterfunc(){
+        const currentValue = document.getElementById("btn").innerHTML;
+        let num = currentValue.split(" ")[1];
+        let new_counter = parseInt(num) + 1;
+        document.getElementById("btn").innerHTML = "Counter" + new_counter;
+    }
+</script>
+<body>
+    <button onclick = "counterfunc()" id = "btn"> Counter 0</button>
+</body>
+</html>
