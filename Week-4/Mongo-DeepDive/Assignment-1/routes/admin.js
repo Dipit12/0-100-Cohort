@@ -26,7 +26,23 @@ router.post('/signup', (req, res) => {
 });
 
 router.post('/courses', adminMiddleware, (req, res) => {
-    // Implement course creation logic
+    
+    const title = req.body.title;
+    const description = req.body.description;
+    const price = req.body.price;
+    const imageLink = req.body.imageLink;
+
+    Course.create({
+        title: title,
+        description: description,
+        price: price,
+        imageLink:imageLink
+    })
+    .then(function(){
+        res.json({
+            message: "Course created successfully"
+        })
+    })
 });
 
 router.get('/courses', adminMiddleware, (req, res) => {

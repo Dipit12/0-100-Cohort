@@ -23,7 +23,7 @@ function pushExample(arr, element) {
   }
   popExample([1, 2, 3]);
   
-  // shift()
+  // shift() - removes the first element
   function shiftExample(arr) {
     console.log("Original Array:", arr);
   
@@ -32,7 +32,7 @@ function pushExample(arr, element) {
   }
   shiftExample([1, 2, 3]);
   
-  // unshift()
+  // unshift() - adds a given element to the start of the array
   function unshiftExample(arr, element) {
     console.log("Original Array:", arr);
   

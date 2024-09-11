@@ -15,4 +15,5 @@ const generated_jwt_token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiRG
 
 // verifying a JWT token
 const details = jwt.verify(generated_jwt_token, "secretPass");
-console.log(details);
+console.log(details); // would return the value object
+

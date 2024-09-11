@@ -1,0 +1,10 @@
+Why to learn React??
+    -> Hype, job, build UI
+    -> Makes easy to manage and build complex frontend
+When should i learn React??
+    -> After mastering JS
+    -> Most project dont need react in inital phase
+Why react was created?
+    -> Ghost message problem
+    -> No consistency of AI
+    

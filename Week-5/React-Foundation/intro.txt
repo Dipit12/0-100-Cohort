@@ -38,5 +38,23 @@ To create a react app, you usually need to worry about three things
         -> It represents the dynamic things in your app(thinhs that change)
         -> For example, the value of the counter
         -> eg:  {count:0};
+        -> For the linkedin Topbar, it could be something like this 
+        {
+            topbar:{
+                home:0,
+                myNetwork:"99+",
+                jobs:0,
+                messaging:0,
+                notifications:19
+            }
+        }
     -> Components
+        -> How a DOM element should render, given a state
+        -> It's a reusable, dynamic, HTML snippet that changes given the state
+        -> Eg the button in the counter is a Components
+        -> Eg the home button, myNetwork button, messaging button in the linkedin topbar
     -> Re-rendering
+        -> A state change triggers a re-render
+        -> A re-render represents the actual DOM being manipulated when the state changes
+
+-> You usually have to define all your components once, and then all you have to do is update the state of your app, react takes care of the re-rendering

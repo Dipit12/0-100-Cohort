@@ -1,0 +1,26 @@
+What would we cover in this week:
+    -> Document Object Model(DOM)
+    -> Connectin FE to BE 
+    -> Chrome Developer tools
+    -> Why Frontend frameworks
+
+The Document Object Model API is a programming interface for web documents. It represents
+the page so that program can change the document structure, style and content. The DOM represents the document as a tree of objects, each
+object represents a part of the page
+
+// What was Javascript
+    -> It was an implementation of the ECMAScript spec
+    -> But the JavaScript that runs in your browser has some extra functionality
+
+-> Let's calculate a simple website to calculate the sum of two numbers
+Making them dynamic is hard 
+-> Changing the elements on the website omce the website is loaded
+-> Actually calculating the sum based on the inputs and rendering it on the screen
+
+// Back in the early 2000's we used classes and ID's in CSS to do frontend, later on they were replaced by React
+DOM uses ID's
+    -> refer to index.html
+** Connecting Frontend to the backend **
+
+// Let's say you dont have access to the calculation logic on the frontend.
+Lets assume it's a hard problem that someone has exposed on a backend server, and you need to hit the backend server and get back the value

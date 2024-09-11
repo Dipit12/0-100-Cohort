@@ -1,0 +1,28 @@
+// Authentication in real world
+Lets say there is Mr.X who works in SBI bank
+and there is Mr.Y who wants to open a bank account
+
+// How does a bank function
+    -> Mr.Y goes and opens a bank account
+    -> Mr.Y deposits some money in the account
+    -> Mr.Y gets back a cheque book from bank
+
+    -> When i have to pay someone, i sign the cheque and everyone can see my sign
+    -> People can try to do the same sign on their cheque book
+    -> Bank won't accept their cheques but
+
+    Your JSON web token is like your cheque book
+    They are issued by the backend when you sign in
+    Anyone can create something very similar, but the backend would reject it
+    If you lose the original JWT, then it's a problem
+
+    ChatGPT example
+    -> Let's say you sign in into chatGPT with your username and password
+    -> It's backend would return you with a JWT
+    -> When you ask a question to it lets say: what is 2+2, you alos send the JWT token in the header for authorization, if its the same JWT issued by the backend of chatGPT, you would get your result
+
+    3 things to do while creating a JWT:
+        -> Generate 
+        -> Decoding
+        -> Verifying
+        

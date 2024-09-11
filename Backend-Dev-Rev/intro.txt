@@ -1,0 +1,21 @@
+-> Express.JS Framework
+-> Introduction to Express.JS
+    -> express js is a npm package
+    -> manages everything from receiving the request and giving the response
+-> Setting up a basic Express application
+-> Routing
+-> Middleware
+-> Request and response handling
+-> Error handling
+
+-> Form handling and working with forms and Cookies
+    -> handle backend process of forms and making sure the data coming from any frontend lib,fw,templating engine
+    -> Session & Cookie: Lets say you open instagram and want to view your account details, you cant view them until you've logged in 
+    -> Whenever we send some information through a form, we send it in plain text but the server receives a blob, so this blob must be converted back to plain text to make it more readable
+
+// Dynamic Routing
+/author/dipit
+/author/tithi
+/author/arnav
+/author/aarav
+-> No need to create different routes for all these usernames
