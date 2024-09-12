@@ -44,3 +44,14 @@
     - Question
         - Write a component that takes a todoId as an input and fetches the data for that todo from the given endpoint and then renders it
         - How would the dependency array change - Done in hook-2
+
+    -useMemo - hooks-3
+        - Before we start, lets understand what memoization means
+        - Its a mildly DSA concept
+        - It means remembering some output given an input and not computing it again
+        
+        Lets say we have to create an app that does 2 things:
+            - Increases counter by 1
+            - Lets user put a value in an input box(n) and you need to show from 1-n
+
+        One restriction - everything needs to be inside App
