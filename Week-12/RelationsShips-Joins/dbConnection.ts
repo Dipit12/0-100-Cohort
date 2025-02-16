@@ -1,0 +1,1 @@
+const database_connection_string = "postgresql://postgres:mysecretpassword@localhost:5432/postgres?sslmode=disable"
